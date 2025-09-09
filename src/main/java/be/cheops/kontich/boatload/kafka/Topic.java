@@ -21,7 +21,7 @@ public class Topic {
 
 		NewTopic newTopic = null;
 
-		final String countryTopic = "Country_Topic_" + countryInt;
+		final String countryTopic = "Country_Topic_vier_" + countryInt;
 
 		Properties props = new Properties();
 
@@ -30,7 +30,7 @@ public class Topic {
 		try (final AdminClient adminClient = AdminClient.create(props)) {
 			try {
 				// Define topic
-				newTopic = new NewTopic(countryTopic, 1, (short) 1);
+				newTopic = new NewTopic(countryTopic, 4, (short) 1);
 
 				// Create topic, which is async call.
 				final CreateTopicsResult createTopicsResult = adminClient.createTopics(Collections.singleton(newTopic));

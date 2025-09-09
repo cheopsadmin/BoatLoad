@@ -21,7 +21,7 @@ public class Ocean {
 
 		for (int i = 0; i < NB_OF_BEACONZ; i++) {
 
-			beaconz[i] = new Beacon(i);
+			beaconz[i] = new Beacon(i, countries[i / BEACONZ_FOR_EACH_COUNTRY]);
 
 			countries[i / BEACONZ_FOR_EACH_COUNTRY].addBeacon(beaconz[i]);
 		}

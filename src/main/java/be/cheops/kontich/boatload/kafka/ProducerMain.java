@@ -4,7 +4,6 @@ import static org.apache.kafka.clients.producer.ProducerConfig.KEY_SERIALIZER_CL
 import static org.apache.kafka.clients.producer.ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG;
 
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Properties;
 
 import org.apache.kafka.clients.admin.AdminClientConfig;

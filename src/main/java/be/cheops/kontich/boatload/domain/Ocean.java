@@ -4,9 +4,9 @@ import be.cheops.kontich.boatload.kafka.Country;
 
 public class Ocean {
 
-	private static final int NB_OF_BOATZ = 100_000;
-	private static final int NB_OF_BEACONZ = 20_000;
-	private static final int BEACONZ_FOR_EACH_COUNTRY = 100;
+	public static final int NB_OF_BOATZ = 100_000;
+	public static final int NB_OF_BEACONZ = 20_000;
+	public static final int BEACONZ_FOR_EACH_COUNTRY = 100;
 
 	private Beacon[] beaconz = new Beacon[NB_OF_BEACONZ];
 	private Boat[] boatz = new Boat[NB_OF_BOATZ];

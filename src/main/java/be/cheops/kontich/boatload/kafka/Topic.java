@@ -1,5 +1,6 @@
 package be.cheops.kontich.boatload.kafka;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
@@ -11,10 +12,10 @@ import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.common.errors.TopicExistsException;
 
 public class Topic {
-
+	
 	public static void main(String[] args) {
 
-		(new Topic()).createTopic(0);
+		createTopic(0);
 	}
 
 	static NewTopic createTopic(int countryInt) {

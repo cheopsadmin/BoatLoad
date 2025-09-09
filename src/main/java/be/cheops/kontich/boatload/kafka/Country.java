@@ -1,7 +1,6 @@
 package be.cheops.kontich.boatload.kafka;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import org.apache.kafka.clients.admin.NewTopic;
 

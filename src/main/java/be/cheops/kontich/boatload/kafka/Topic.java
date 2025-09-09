@@ -10,13 +10,18 @@ import org.apache.kafka.clients.admin.CreateTopicsResult;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.common.errors.TopicExistsException;
 
-public class Main {
+public class Topic {
 
-	private NewTopic createTopic() {
+	public static void main(String[] args) {
+
+		(new Topic()).createTopic(0);
+	}
+
+	static NewTopic createTopic(int countryInt) {
 
 		NewTopic newTopic = null;
 
-		final String beaconTopic = "Specific_Beacon_Topic";
+		final String countryTopic = "Country_Topic_" + countryInt;
 
 		Properties props = new Properties();
 
@@ -25,13 +30,13 @@ public class Main {
 		try (final AdminClient adminClient = AdminClient.create(props)) {
 			try {
 				// Define topic
-				newTopic = new NewTopic(beaconTopic, 1, (short) 1);
+				newTopic = new NewTopic(countryTopic, 1, (short) 1);
 
 				// Create topic, which is async call.
 				final CreateTopicsResult createTopicsResult = adminClient.createTopics(Collections.singleton(newTopic));
 
 				// Since the call is Async, Lets wait for it to complete.
-				createTopicsResult.values().get(beaconTopic).get();
+				createTopicsResult.values().get(countryTopic).get();
 
 			} catch (InterruptedException | ExecutionException e) {
 				if (!(e.getCause() instanceof TopicExistsException))

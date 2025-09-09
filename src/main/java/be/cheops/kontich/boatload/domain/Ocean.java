@@ -1,18 +1,29 @@
 package be.cheops.kontich.boatload.domain;
 
+import be.cheops.kontich.boatload.kafka.Country;
+
 public class Ocean {
 
 	private static final int NB_OF_BOATZ = 100_000;
 	private static final int NB_OF_BEACONZ = 2_000_000;
+	private static final int BEACONZ_FOR_EACH_COUNTRY = 1000;
 
 	private Beacon[] beaconz = new Beacon[NB_OF_BEACONZ];
 	private Boat[] boatz = new Boat[NB_OF_BOATZ];
+	private Country[] countries = new Country[NB_OF_BEACONZ / BEACONZ_FOR_EACH_COUNTRY];
 
 	public Ocean() {
+
+		for (int i = 0; i < NB_OF_BEACONZ / BEACONZ_FOR_EACH_COUNTRY; i++) {
+
+			countries[i] = new Country(i);
+		}
 
 		for (int i = 0; i < NB_OF_BEACONZ; i++) {
 
 			beaconz[i] = new Beacon(i);
+
+			countries[i / BEACONZ_FOR_EACH_COUNTRY].addBeacon(beaconz[i]);
 		}
 
 		for (int i = 0; i < NB_OF_BOATZ; i++) {

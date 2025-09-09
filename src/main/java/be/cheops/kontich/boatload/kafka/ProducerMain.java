@@ -30,7 +30,7 @@ public class ProducerMain {
 		props.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
 	}
 
-	void send(String topic, ArrayList<String> beacons, ArrayList<String> boats) {
+	public void send(String topic, ArrayList<String> beacons, ArrayList<String> boats) {
 
 		try (final Producer<String, String> producer = new KafkaProducer<>(props)) {
 

@@ -1,6 +1,6 @@
 package be.cheops.kontich.boatload.domain;
 
-import be.cheops.kontich.boatload.kafka.Country;
+import be.cheops.kontich.boatload.produce.Country;
 
 public class Beacon {
 

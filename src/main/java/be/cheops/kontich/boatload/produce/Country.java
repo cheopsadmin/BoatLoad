@@ -1,10 +1,12 @@
-package be.cheops.kontich.boatload.kafka;
+package be.cheops.kontich.boatload.produce;
 
 import java.util.ArrayList;
 
 import org.apache.kafka.clients.admin.NewTopic;
 
 import be.cheops.kontich.boatload.domain.Beacon;
+import be.cheops.kontich.boatload.kafka.ProducerMain;
+import be.cheops.kontich.boatload.kafka.Topic;
 
 public class Country {
 

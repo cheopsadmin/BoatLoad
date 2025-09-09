@@ -18,7 +18,7 @@ public class Topic {
 		createTopic(0);
 	}
 
-	static NewTopic createTopic(int countryInt) {
+	public static NewTopic createTopic(int countryInt) {
 
 		NewTopic newTopic = null;
 

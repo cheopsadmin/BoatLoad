@@ -32,7 +32,9 @@ public class ConsumerMain {
 			usedInts.add(index);
 		}
 
-		//consumer.output();
+		// consumer.output();
+
+		consumer.listen();
 	}
 
 	private void addEnterprise(Enterprise enterprise) {
@@ -54,6 +56,14 @@ public class ConsumerMain {
 		for (int i : usedInts) {
 
 			System.out.println(i);
+		}
+	}
+
+	private void listen() {
+
+		for (Enterprise enterprise : myEnterprises) {
+
+			enterprise.listen();
 		}
 	}
 
